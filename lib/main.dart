@@ -10,12 +10,30 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("awesome"),
+        title: Text("Awesome"),
       ),
-      body: Container(
-        // child: Text("Hi flutter!"),
-        color: Colors.deepOrangeAccent,
-        width: 100,
+      body: Center(
+        child: Container(
+          // color: Colors.deepOrangeAccent,
+          width: 100,
+          height: 100,
+          // clipBehavior: Clip.antiAlias,
+          padding: const EdgeInsets.all(10),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: Colors.grey,
+              // shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(10),
+              gradient: LinearGradient(
+                  colors: [Colors.yellow, Colors.purple, Colors.red]),
+              boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 10)]),
+          child: Text(
+            "Hi flutter!",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }
