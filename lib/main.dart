@@ -1,27 +1,21 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.purple),
+    ));
 
-class MyApp extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var data = ['arjun', 'abi ', 'ani'];
-
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      theme: ThemeData(
-          accentColor: Colors.red,
-          primaryColor: Colors.red,
-          brightness: Brightness.dark),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: ListView.builder(
-            itemCount: data.length,
-            itemBuilder: (context, int index) {
-              return Text(data[index]);
-            }),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("awesome"),
+      ),
+      body: Container(
+        // child: Text("Hi flutter!"),
+        color: Colors.deepOrangeAccent,
+        width: 100,
       ),
     );
   }
