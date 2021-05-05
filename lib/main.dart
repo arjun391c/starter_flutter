@@ -12,27 +12,41 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Awesome"),
       ),
-      body: Center(
-        child: Container(
-          // color: Colors.deepOrangeAccent,
-          width: 100,
-          height: 100,
-          // clipBehavior: Clip.antiAlias,
-          padding: const EdgeInsets.all(10),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              color: Colors.grey,
-              // shape: BoxShape.circle,
-              borderRadius: BorderRadius.circular(10),
-              gradient: LinearGradient(
-                  colors: [Colors.yellow, Colors.purple, Colors.red]),
-              boxShadow: [BoxShadow(color: Colors.grey, blurRadius: 10)]),
-          child: Text(
-            "Hi flutter!",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+      body: Container(
+        color: Colors.black,
+        height: 500,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              // color: Colors.deepOrangeAccent,
+              width: 100,
+              height: 100,
+              // clipBehavior: Clip.antiAlias,
+              padding: const EdgeInsets.all(10),
+              // alignment: Alignment.center,
+              color: Colors.red,
+            ),
+            Container(
+              // color: Colors.deepOrangeAccent,
+              width: 100,
+              height: 100,
+              // clipBehavior: Clip.antiAlias,
+              padding: const EdgeInsets.all(10),
+              // alignment: Alignment.center,
+              color: Colors.green,
+            ),
+            Container(
+              // color: Colors.deepOrangeAccent,
+              width: 100,
+              height: 100,
+              // clipBehavior: Clip.antiAlias,
+              padding: const EdgeInsets.all(10),
+              // alignment: Alignment.center,
+              color: Colors.blue,
+            ),
+          ],
         ),
       ),
     );
